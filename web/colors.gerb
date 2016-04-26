@@ -1,0 +1,12 @@
+<html>
+    <% if m, err := regexp.MatchString("[^-]*-[a-k].*", hostname); err == nil && m == true { %>
+    <body bgcolor="red">
+    <% } else if m, err = regexp.MatchString("[^-]*-[l-z].*", hostname); err == nil && m == true { %>
+    <body bgcolor="lightblue">
+    <% } else { %>
+    <body bgcolor="lightgreen">
+    <% } %>
+    <h1>Welcome from host:</h1>
+    <h2><%= hostname %></h2>
+    </body>
+</html>
